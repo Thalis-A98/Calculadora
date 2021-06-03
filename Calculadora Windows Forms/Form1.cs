@@ -116,7 +116,11 @@ namespace Calculadora_Windows_Forms
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtPainel.Text = txtPainel.Text.Remove(txtPainel.Text.Length - 1);
+            if (txtPainel.Text != string.Empty)
+            {
+                txtPainel.Text = txtPainel.Text.Remove(txtPainel.Text.Length - 1);
+            }
+            lblCalculo.Text = lblCalculo.Text.Remove(lblCalculo.Text.Length - 1);
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
